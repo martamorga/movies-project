@@ -11,7 +11,7 @@
 
 	<servlet>
 		<servlet-name>hello</servlet-name>
-		<servlet-class>mmo</servlet-class>
+		<servlet-class>pl.mmo.heloo.HelloServlet</servlet-class>
 	</servlet>
 
 	<servlet-mapping>

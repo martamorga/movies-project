@@ -1,4 +1,4 @@
-package mmo;
+package pl.mmo.heloo;
 
 import java.io.IOException;
 import java.util.Enumeration;
@@ -15,9 +15,9 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.http.HttpRequest;
 
-@WebFilter(filterName = "/MyRESTFilter2", 
+//@WebFilter(filterName = "/MyRESTFilter2", 
 //servletNames = { "HelloServlet" }, 
-urlPatterns = { "/hello" })
+//urlPatterns = { "/hello" })
 public class MyRESTFilter2 implements javax.servlet.Filter {
 
     @Override

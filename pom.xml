@@ -5,7 +5,7 @@
 	<artifactId>sternik-weekend</artifactId>
 	<packaging>war</packaging>
 	<version>1.1-SNAPSHOT</version>
-	<name>Heroku apka grupa weekendowa</name>
+	<name>Marta apka</name>
 
 	<properties>
 		<!-- <java.version>1.8</java.version> -->

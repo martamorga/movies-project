@@ -1,4 +1,4 @@
-package mmo;
+package pl.mmo.heloo;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -19,7 +19,8 @@ import javax.servlet.http.HttpSession;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
-public class HelloServlet extends HttpServlet {
+
+public class HelloServlet extends HttpServlet{
 
     HikariDataSource dataSource;
 

@@ -1,4 +1,4 @@
-package mmo;
+package pl.mmo.heloo;
 
 import java.io.IOException;
 
@@ -7,11 +7,10 @@ import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
-import javax.servlet.annotation.WebFilter;
 
-@WebFilter(filterName = "/MyRESTFilter", 
+//@WebFilterlter(filterName = "/MyRESTFilter", 
 //servletNames = { "HelloServlet" }, 
-urlPatterns = { "/hello" })
+//urlPatterns = { "/hello" })
 public class MyRESTFilter implements javax.servlet.Filter {
 
     @Override
