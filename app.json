@@ -1,0 +1,6 @@
+{
+  "name": "sernik-weekend",
+  "description": "new app on heroku.",
+  "image": "heroku/java",
+  "addons": [ "heroku-postgresql" ]
+}
