@@ -1,4 +1,4 @@
-package pl.mmo.web;
+package pl.mmo.web.controlers;
 
 import java.util.Date;
 
@@ -24,44 +24,48 @@ import pl.mmo.repositories.NoSuchMonetaException;
 
 @Controller
 public class WprawkiController {
-	
-	@Autowired
-	@Qualifier("tablica")
-	MonetyRepository baza;
 
-    @RequestMapping(path = "/wprawki", method=RequestMethod.GET)
+    @Autowired
+    @Qualifier("tablica")
+    MonetyRepository baza;
+    
+    @RequestMapping(path = "/wprawki", method = RequestMethod.GET)
     public String wprawki(ModelMap model) {
         model.put("msg", "Wartosc z modelu");
         model.addAttribute("data", new Date());
         return "wprawki";
     }
 
-    @RequestMapping("/wprawki/{cos}")
+    @GetMapping("/wprawki/{cos}")
     public String wprawki(@PathVariable String cos, ModelMap model) {
         model.addAttribute("cos", cos);
         model.put("msg", "Wartosc z modelu");
         model.addAttribute("data", new Date());
         return "wprawki";
     }
-    
-    
+
     @GetMapping("/wprawki2")
     @ResponseBody
     public String wprawkiParam(@RequestParam("cos") String cosParam, ModelMap model) {
-        return "wprawki z param coś" + cosParam;
+        return "Wprawki z param cos=" + cosParam;
     }
     
-    //przykładowe wywaołanie na stronie: https://sernik-weekend.herokuapp.com/wprawki2?cos=cosik
-
-    @RequestMapping(value = "/wprawki/monety/{id}/json", produces = "application/json", method = RequestMethod.GET)
+    @GetMapping("/wprawki3")
+    @ResponseBody
+    public String wprawkiHeader(@RequestHeader("User-Agent") String cosParam, ModelMap model) {
+        return "Uzywasz przegladarki:=" + cosParam;
+    }
+    
+    @GetMapping(value = "/wprawki/monety/{id}/json", produces = "application/json")
     @ResponseBody
     public ResponseEntity<Moneta> viewAsJson(@PathVariable("id") Long id, final ModelMap model) {
         Moneta m;
         try {
             m = baza.readById(id);
             return new ResponseEntity<Moneta>(m, HttpStatus.OK);
+            
         } catch (NoSuchMonetaException e) {
-            e.printStackTrace();
+            System.out.println(e.getClass().getName());
             m = new Moneta();
             m.setNumerKatalogowy(id);
             m.setKrajPochodzenia("Polska");
@@ -70,9 +74,10 @@ public class WprawkiController {
             try {
                 baza.create(m);
             } catch (MonetaAlreadyExistsException e1) {
-                e1.printStackTrace();
+                System.out.println(e1.getClass().getName());
             }
             return new ResponseEntity<Moneta>(m, HttpStatus.CREATED);
         }
-}
+    }
+
 }
