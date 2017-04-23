@@ -1,5 +1,6 @@
 package pl.mmo.entities;
 
+
 public enum Status {
     
     NOWA("Nowa"), 
