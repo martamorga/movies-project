@@ -1,0 +1,48 @@
+#--- wprawki
+msg.zparam=Poda\u0142e\u015B mi: {0}
+bbb=Cos z statycznyc mesages
+
+#--- klaser w\u0142asciwy
+title.application=Klaser Monet
+title.list=Lista Monet
+title.new=Dodaj now\u0105 monet\u0119
+
+date.format=yyyy-MM-dd
+bool.true=tak
+bool.false=nie
+
+klaser.numerKatalogowy=numerKatalogowy
+klaser.nominal=nominal
+klaser.opis=opis
+klaser.waluta=waluta
+klaser.cenaNabycia=cenaNabycia
+klaser.dataNabycia=dataNabycia
+klaser.krajPochodzenia=krajPochodzenia
+klaser.status=status
+klaser.operacje=operacje
+
+klaser.moneta.dane=Dane monety
+klaser.add=Dodaj monet\u0119
+klaser.remove=Usu\u0144
+klaser.edit=Edytuj
+
+klaser.status.NOWA=Nowa!
+klaser.status.DUBLET=Dublet!
+klaser.status.DO_SPRZEDANIA=Do sprzedania!
+
+
+#------------> Bean Validation messages <------------------------
+#ConstraintName.ModelName.propertyName=validation error message
+NotNull.moneta.numerKatalogowy=Numer katalogowy musi by\u0107 podany!
+NotNull.moneta.nominal=Nomina\u0142 musi by\u0107 podany!
+Size.moneta.opis=Opis powinien miec minimalnie {2} i maksymalnie {1} znaków.
+NotEmpty.moneta.waluta=Walute nale\u017Cy poda\u0107.
+NotNull.moneta.cenaNabycia=Cena nabycia nie mo\u017Ce by\u0107 pusta.
+NotNull.moneta.dataNabycia=Podaj dat\u0119!
+NotEmpty.moneta.krajPochodzenia=Podaj kraj!
+NotNull.moneta.status=Wybierz status.
+
+#Na problemy z konwersj\u0105
+typeMismatch.moneta.numerKatalogowy= Podaj liczb\u0119
+typeMismatch.moneta.nominal= Podaj liczb\u0119
+typeMismatch.moneta.cenaNabycia= Podaj liczb\u0119

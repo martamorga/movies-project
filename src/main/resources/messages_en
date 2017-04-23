@@ -1,0 +1,44 @@
+bbb=Something from static mesages
+title.application=Coins claser
+title.list=Coins List
+title.new=Add new Coin
+
+date.format=yyyy-MM-dd
+bool.true=true
+bool.false=false
+
+klaser.numerKatalogowy=catalog no
+klaser.nominal=nominal
+klaser.opis=description
+klaser.waluta=currency
+klaser.cenaNabycia=price
+klaser.dataNabycia=date
+klaser.krajPochodzenia=country
+klaser.status=status
+klaser.operacje=operations
+
+klaser.moneta.dane=Dane monety
+klaser.add=Dodaj monet\u0119
+klaser.remove=Del
+klaser.edit=Edit
+
+klaser.status.NOWA=Nowa!
+klaser.status.DUBLET=Dublet!
+klaser.status.DO_SPRZEDANIA=Do sprzedania!
+
+
+#------------> Bean Validation messages <------------------------
+#ConstraintName.ModelName.propertyName=validation error message
+NotNull.moneta.numerKatalogowy=Numer katalogowy musi by\u0107 podany!
+NotNull.moneta.nominal=Nomina\u0142 musi by\u0107 podany!
+Size.moneta.opis=Opis powinien miec minimalnie {2} i maksymalnie {1} znak�w.
+NotEmpty.moneta.waluta=Walute nale\u017Cy poda\u0107.
+NotNull.moneta.cenaNabycia=Cena nabycia nie mo\u017Ce by\u0107 pusta.
+NotNull.moneta.dataNabycia=Podaj dat\u0119!
+NotEmpty.moneta.krajPochodzenia=Podaj kraj!
+NotNull.moneta.status=Wybierz status.
+
+#Na problemy z konwersj\u0105
+typeMismatch.moneta.numerKatalogowy= Podaj liczb\u0119
+typeMismatch.moneta.nominal= Podaj liczb\u0119
+typeMismatch.moneta.cenaNabycia= Podaj liczb\u0119
