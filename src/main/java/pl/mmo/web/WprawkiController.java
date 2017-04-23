@@ -35,5 +35,7 @@ public class WprawkiController {
     public String wprawkiParam(@RequestParam("cos") String cosParam, ModelMap model) {
         return "wprawki z param coś" + cosParam;
     }
+    
+    //przykładowe wywaołanie na stronie: https://sernik-weekend.herokuapp.com/wprawki2?cos=cosik
 
 }
