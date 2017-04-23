@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -38,4 +39,10 @@ public class WprawkiController {
     
     //przykładowe wywaołanie na stronie: https://sernik-weekend.herokuapp.com/wprawki2?cos=cosik
 
+    @GetMapping("/wprawki3")
+    @ResponseBody
+    public String wprawkiHeader(@RequestHeader("User-Agent") String cosParam, ModelMap model) {
+        return "Używasz przyglądarki" + cosParam;
+    }
+    
 }
