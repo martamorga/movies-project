@@ -1,6 +1,8 @@
-package pl.mmo.web.controlers;
+package pl.mmo.web;
 
 import java.util.Date;
+
+import javax.ws.rs.HeaderParam;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -24,12 +26,12 @@ import pl.mmo.repositories.NoSuchMonetaException;
 
 @Controller
 public class WprawkiController {
+	
+	@Autowired
+	@Qualifier("tablica")
+	MonetyRepository baza;
 
-    @Autowired
-    @Qualifier("tablica")
-    MonetyRepository baza;
-    
-    @RequestMapping(path = "/wprawki", method = RequestMethod.GET)
+    @RequestMapping(path="/wprawki", method=RequestMethod.GET)
     public String wprawki(ModelMap model) {
         model.put("msg", "Wartosc z modelu");
         model.addAttribute("data", new Date());
@@ -43,29 +45,28 @@ public class WprawkiController {
         model.addAttribute("data", new Date());
         return "wprawki";
     }
-
+    
     @GetMapping("/wprawki2")
     @ResponseBody
     public String wprawkiParam(@RequestParam("cos") String cosParam, ModelMap model) {
-        return "Wprawki z param cos=" + cosParam;
+        return "wprawki z param cos="+cosParam;
     }
-    
+
     @GetMapping("/wprawki3")
     @ResponseBody
     public String wprawkiHeader(@RequestHeader("User-Agent") String cosParam, ModelMap model) {
-        return "Uzywasz przegladarki:=" + cosParam;
+        return "uzywasz przegladarki="+cosParam;
     }
-    
-    @GetMapping(value = "/wprawki/monety/{id}/json", produces = "application/json")
+
+    @RequestMapping(value = "/wprawki/monety/{id}/json", produces = "application/json", method = RequestMethod.GET)
     @ResponseBody
     public ResponseEntity<Moneta> viewAsJson(@PathVariable("id") Long id, final ModelMap model) {
         Moneta m;
         try {
             m = baza.readById(id);
             return new ResponseEntity<Moneta>(m, HttpStatus.OK);
-            
         } catch (NoSuchMonetaException e) {
-            System.out.println(e.getClass().getName());
+            e.printStackTrace();
             m = new Moneta();
             m.setNumerKatalogowy(id);
             m.setKrajPochodzenia("Polska");
@@ -74,10 +75,9 @@ public class WprawkiController {
             try {
                 baza.create(m);
             } catch (MonetaAlreadyExistsException e1) {
-                System.out.println(e1.getClass().getName());
+                e1.printStackTrace();
             }
             return new ResponseEntity<Moneta>(m, HttpStatus.CREATED);
         }
-    }
-
+}
 }

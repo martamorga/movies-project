@@ -1,5 +1,4 @@
-package pl.mmo.web.controlers;
-
+package pl.mmo.web;
 
 import java.util.Arrays;
 import java.util.Calendar;
@@ -25,7 +24,6 @@ import pl.mmo.entities.Moneta;
 import pl.mmo.entities.Status;
 import pl.mmo.services.KlaserService;
 import pl.mmo.services.NotificationService;
-
 
 @Controller
 public class MonetyController {
