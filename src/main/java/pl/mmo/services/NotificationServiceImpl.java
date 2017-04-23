@@ -29,6 +29,7 @@ public class NotificationServiceImpl implements NotificationService {
     public List<NotificationMessage> getNotificationMessages() {
         List<NotificationMessage> notifyMessages = (List<NotificationMessage>) httpSession.getAttribute(NOTIFY_MSG_SESSION_KEY);
         httpSession.setAttribute(NOTIFY_MSG_SESSION_KEY, new ArrayList<NotificationMessage>());
+        //czyszczenie sesji
         return notifyMessages;
     }
     
@@ -36,8 +37,9 @@ public class NotificationServiceImpl implements NotificationService {
     
     private void addNotificationMessage(NotificationMessageType type, String msg) {
         List<NotificationMessage> notifyMessages = (List<NotificationMessage>) httpSession.getAttribute(NOTIFY_MSG_SESSION_KEY);
-        notifyMessages = new ArrayList<NotificationMessage>();
+
         if (notifyMessages == null) {
+            notifyMessages = new ArrayList<NotificationMessage>();
         }
         notifyMessages.add(new NotificationMessage(type, msg));
         httpSession.setAttribute(NOTIFY_MSG_SESSION_KEY, notifyMessages);
