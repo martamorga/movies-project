@@ -1,5 +1,6 @@
 package pl.mmo.services;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,11 +26,9 @@ public class NotificationServiceImpl implements NotificationService {
         addNotificationMessage(NotificationMessageType.ERROR, msg);
     }
 
-    @Override
     public List<NotificationMessage> getNotificationMessages() {
         List<NotificationMessage> notifyMessages = (List<NotificationMessage>) httpSession.getAttribute(NOTIFY_MSG_SESSION_KEY);
         httpSession.setAttribute(NOTIFY_MSG_SESSION_KEY, new ArrayList<NotificationMessage>());
-        //czyszczenie sesji
         return notifyMessages;
     }
     
@@ -37,14 +36,12 @@ public class NotificationServiceImpl implements NotificationService {
     
     private void addNotificationMessage(NotificationMessageType type, String msg) {
         List<NotificationMessage> notifyMessages = (List<NotificationMessage>) httpSession.getAttribute(NOTIFY_MSG_SESSION_KEY);
-
         if (notifyMessages == null) {
             notifyMessages = new ArrayList<NotificationMessage>();
         }
         notifyMessages.add(new NotificationMessage(type, msg));
         httpSession.setAttribute(NOTIFY_MSG_SESSION_KEY, notifyMessages);
     }
-    
     
 
     public enum NotificationMessageType {

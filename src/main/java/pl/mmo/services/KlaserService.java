@@ -6,7 +6,6 @@ import java.util.Optional;
 import pl.mmo.entities.Moneta;
 
 
-
 public interface KlaserService {
     List<Moneta> findAll();
 
