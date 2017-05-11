@@ -106,7 +106,7 @@ public class FilmyController {
 
     @RequestMapping(value = "/filmy/create", method = RequestMethod.GET)
     public String showMainPages(final Film film) {
-        film.setDataPolskiejPremiery(Calendar.getInstance().getTime());
+        film.setDataDodaniaDoRepozytorium(Calendar.getInstance().getTime());
         return "film";
     }
 }

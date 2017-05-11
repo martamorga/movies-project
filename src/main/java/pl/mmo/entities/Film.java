@@ -10,13 +10,13 @@ public class Film {
     private String tytul;
     private String autor;
     private BigDecimal cenaWypozyczenia;
-    private Date dataPolskiejPremiery;
+    private Date dataDodaniaDoRepozytorium;
     private String krajProdukcji;
     private Status status;
 
 
     public static Film dodajFilm(Long id, String tytul, String autor, String krajPochodzenia, String gatunek,
-                                 Date dataPolskiejPremiery, BigDecimal cenaWypozyczenia, Status status) {
+                                 Date dataDodaniaDoRepozytorium, BigDecimal cenaWypozyczenia, Status status) {
         Film f = new Film();
         f.id = id;
         f.krajProdukcji = krajPochodzenia;
@@ -24,7 +24,7 @@ public class Film {
         f.tytul = tytul;
         f.autor = autor;
         f.cenaWypozyczenia = cenaWypozyczenia;
-        f.dataPolskiejPremiery = dataPolskiejPremiery;
+        f.dataDodaniaDoRepozytorium = dataDodaniaDoRepozytorium;
         f.status = status;
         return f;
     }
@@ -49,8 +49,8 @@ public class Film {
         return cenaWypozyczenia;
     }
 
-    public Date getDataPolskiejPremiery() {
-        return dataPolskiejPremiery;
+    public Date getDataDodaniaDoRepozytorium() {
+        return dataDodaniaDoRepozytorium;
     }
 
     public String getKrajProdukcji() {
@@ -81,8 +81,8 @@ public class Film {
         this.cenaWypozyczenia = cenaWypozyczenia;
     }
 
-    public void setDataPolskiejPremiery(Date dataPolskiejPremiery) {
-        this.dataPolskiejPremiery = dataPolskiejPremiery;
+    public void setDataDodaniaDoRepozytorium(Date dataDodaniaDoRepozytorium) {
+        this.dataDodaniaDoRepozytorium = dataDodaniaDoRepozytorium;
     }
 
     public void setKrajProdukcji(String krajProdukcji) {
@@ -99,7 +99,7 @@ public class Film {
         int result = 1;
         result = prime * result + ((tytul == null) ? 0 : tytul.hashCode());
         result = prime * result + ((cenaWypozyczenia == null) ? 0 : cenaWypozyczenia.hashCode());
-        result = prime * result + ((dataPolskiejPremiery == null) ? 0 : dataPolskiejPremiery.hashCode());
+        result = prime * result + ((dataDodaniaDoRepozytorium == null) ? 0 : dataDodaniaDoRepozytorium.hashCode());
         result = prime * result + ((krajProdukcji == null) ? 0 : krajProdukcji.hashCode());
         result = prime * result + ((gatunek == null) ? 0 : gatunek.hashCode());
         result = prime * result + ((id == null) ? 0 : id.hashCode());
@@ -127,10 +127,10 @@ public class Film {
                 return false;
         } else if (!cenaWypozyczenia.equals(other.cenaWypozyczenia))
             return false;
-        if (dataPolskiejPremiery == null) {
-            if (other.dataPolskiejPremiery != null)
+        if (dataDodaniaDoRepozytorium == null) {
+            if (other.dataDodaniaDoRepozytorium != null)
                 return false;
-        } else if (!dataPolskiejPremiery.equals(other.dataPolskiejPremiery))
+        } else if (!dataDodaniaDoRepozytorium.equals(other.dataDodaniaDoRepozytorium))
             return false;
         if (krajProdukcji == null) {
             if (other.krajProdukcji != null)
@@ -163,7 +163,7 @@ public class Film {
     @Override
     public String toString() {
         return "Film [id=" + id + ", gatunek=" + gatunek + ", Tytul=" + tytul + ", autor="
-                + autor + ", cenaWypozyczenia=" + cenaWypozyczenia + ", dataPolskiejPremiery=" + dataPolskiejPremiery + ", krajProdukcji="
+                + autor + ", cenaWypozyczenia=" + cenaWypozyczenia + ", dataDodaniaDoRepozytorium=" + dataDodaniaDoRepozytorium + ", krajProdukcji="
                 + krajProdukcji + ", status=" + status + "]";
     }
 

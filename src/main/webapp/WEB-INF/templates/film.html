@@ -41,9 +41,9 @@
           <span th:if="${#fields.hasErrors('gatunek')}" th:errors="*{gatunek}">Incorrect gatunek</span>
         </div>
         <div>
-          <label for="dataPolskiejPremiery"> <span th:text="#{klaser.dataPolskiejPremiery}">Date kup</span> (<span
+          <label for="dataDodaniaDoRepozytorium"> <span th:text="#{klaser.dataDodaniaDoRepozytorium}">Date kup</span> (<span
                   th:text="#{date.format}">YYYY/MM/DD</span>)
-          </label> <input type="text" th:field="*{dataPolskiejPremiery}" th:errorclass="fieldError" />
+          </label> <input type="text" th:field="*{dataDodaniaDoRepozytorium}" th:errorclass="fieldError" />
         </div>
         <div>
           <label for="krajProdukcji"> <span th:text="#{klaser.krajProdukcji}">krajProdukcji</span>

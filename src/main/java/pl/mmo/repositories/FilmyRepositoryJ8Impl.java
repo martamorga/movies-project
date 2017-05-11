@@ -17,12 +17,12 @@ import pl.mmo.entities.Status;
 @Qualifier("lista")
 public class FilmyRepositoryJ8Impl implements FilmyRepository {
 
-    private List<Film> filmy = new ArrayList<Film>() {
+    private List<Film> monety = new ArrayList<Film>() {
         {
 
             //Long id, String tytul, String autor, String krajPochodzenia, String gatunek,
             //Date dataPolskiejPremiery, BigDecimal cenaWypozyczenia, Status status
-            add(Film.dodajFilm(1L, "Skazani na Shawshank", "Frank Darabont", "USA", "Dramat", new Date(2017-05-05), new BigDecimal("5.5"),
+            add(Film.dodajFilm(1L, "Skazani na Shawshank", "Frank Darabont", "USA", "Dramat", new Date("2000-01-05"), new BigDecimal("5.5"),
                     Status.WYPOZYCZONY));
             add(Film.dodajFilm(2L, "Nietykalni", "Olivier Nakache, Eric Toledano", "Francja", "Biograficzny, Dramat, Komedia", new Date(), new BigDecimal("1.2"),
                     Status.DO_WYPOZYCZENIA));
@@ -36,32 +36,32 @@ public class FilmyRepositoryJ8Impl implements FilmyRepository {
 
     @Override
     public List<Film> findAll() {
-        return this.filmy;
+        return this.monety;
     }
 
     @Override
     public Film readById(Long id) throws NoSuchMovieException {
-        return this.filmy.stream().filter(p -> Objects.equals(p.getId(), id)).findFirst()
+        return this.monety.stream().filter(p -> Objects.equals(p.getId(), id)).findFirst()
                 .orElseThrow(NoSuchMovieException::new);
     }
 
     @Override
     public Film create(Film film) {
-        if (!filmy.isEmpty()) {
+        if (!monety.isEmpty()) {
             film.setId(
-                    this.filmy.stream().mapToLong(p -> p.getId()).max().getAsLong() + 1);
+                    this.monety.stream().mapToLong(p -> p.getId()).max().getAsLong() + 1);
         } else {
             film.setId(1L);
         }
-        this.filmy.add(film);
+        this.monety.add(film);
         return film;
     }
 
     @Override
     public Film update(Film film) throws NoSuchMovieException {
-        for (int i = 0; i < this.filmy.size(); i++) {
-            if (Objects.equals(this.filmy.get(i).getId(), film.getId())) {
-                this.filmy.set(i, film);
+        for (int i = 0; i < this.monety.size(); i++) {
+            if (Objects.equals(this.monety.get(i).getId(), film.getId())) {
+                this.monety.set(i, film);
                 return film;
             }
         }
@@ -70,9 +70,9 @@ public class FilmyRepositoryJ8Impl implements FilmyRepository {
 
     @Override
     public void deleteById(Long id) throws NoSuchMovieException {
-        for (int i = 0; i < this.filmy.size(); i++) {
-            if (Objects.equals(this.filmy.get(i).getId(), id)) {
-                this.filmy.remove(i);
+        for (int i = 0; i < this.monety.size(); i++) {
+            if (Objects.equals(this.monety.get(i).getId(), id)) {
+                this.monety.remove(i);
             }
         }
         throw new NoSuchMovieException("Nie ma takiego filmu: " + id);
