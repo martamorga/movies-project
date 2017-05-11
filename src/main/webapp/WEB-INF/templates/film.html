@@ -61,11 +61,9 @@
         </div>
         <div class="submit">          
             <button th:if="*{id}" type="submit" name="save" th:value="*{id}" >Zapisz</button>
-          <a href="film.html" th:href="@{|/filmy/${film.id}|}" >
-            <button type="button" th:text="#{klaser.edit}">Editt</button></a>
 
 
-          <button th:unless="*{id}" type="submit" name="create" >Zapisz.</button>
+            <button th:unless="*{id}" type="submit" name="create" >Zapisz.</button>
             
             
             <a href="klaser.html" th:href="@{/filmy}" ><button type="button">Cancel</button></a>
