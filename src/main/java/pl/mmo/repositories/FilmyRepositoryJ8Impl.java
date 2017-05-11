@@ -17,7 +17,7 @@ import pl.mmo.entities.Status;
 @Qualifier("lista")
 public class FilmyRepositoryJ8Impl implements FilmyRepository {
 
-    private List<Film> monety = new ArrayList<Film>() {
+    private List<Film> filmy = new ArrayList<Film>() {
         {
 
             //Long id, String tytul, String autor, String krajPochodzenia, String gatunek,
@@ -36,32 +36,32 @@ public class FilmyRepositoryJ8Impl implements FilmyRepository {
 
     @Override
     public List<Film> findAll() {
-        return this.monety;
+        return this.filmy;
     }
 
     @Override
     public Film readById(Long id) throws NoSuchMovieException {
-        return this.monety.stream().filter(p -> Objects.equals(p.getId(), id)).findFirst()
+        return this.filmy.stream().filter(p -> Objects.equals(p.getId(), id)).findFirst()
                 .orElseThrow(NoSuchMovieException::new);
     }
 
     @Override
     public Film create(Film film) {
-        if (!monety.isEmpty()) {
+        if (!filmy.isEmpty()) {
             film.setId(
-                    this.monety.stream().mapToLong(p -> p.getId()).max().getAsLong() + 1);
+                    this.filmy.stream().mapToLong(p -> p.getId()).max().getAsLong() + 1);
         } else {
             film.setId(1L);
         }
-        this.monety.add(film);
+        this.filmy.add(film);
         return film;
     }
 
     @Override
     public Film update(Film film) throws NoSuchMovieException {
-        for (int i = 0; i < this.monety.size(); i++) {
-            if (Objects.equals(this.monety.get(i).getId(), film.getId())) {
-                this.monety.set(i, film);
+        for (int i = 0; i < this.filmy.size(); i++) {
+            if (Objects.equals(this.filmy.get(i).getId(), film.getId())) {
+                this.filmy.set(i, film);
                 return film;
             }
         }
@@ -70,9 +70,9 @@ public class FilmyRepositoryJ8Impl implements FilmyRepository {
 
     @Override
     public void deleteById(Long id) throws NoSuchMovieException {
-        for (int i = 0; i < this.monety.size(); i++) {
-            if (Objects.equals(this.monety.get(i).getId(), id)) {
-                this.monety.remove(i);
+        for (int i = 0; i < this.filmy.size(); i++) {
+            if (Objects.equals(this.filmy.get(i).getId(), id)) {
+                this.filmy.remove(i);
             }
         }
         throw new NoSuchMovieException("Nie ma takiego filmu: " + id);
