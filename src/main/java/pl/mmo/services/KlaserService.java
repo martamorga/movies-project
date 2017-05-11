@@ -3,21 +3,21 @@ package pl.mmo.services;
 import java.util.List;
 import java.util.Optional;
 
-import pl.mmo.entities.Moneta;
+import pl.mmo.entities.Film;
 
 
 public interface KlaserService {
-    List<Moneta> findAll();
+    List<Film> findAll();
 
-    List<Moneta> findAllToSell();
+    List<Film> findAllToSell();
 
-    Optional<Moneta> findById(Long id);
+    Optional<Film> findById(Long id);
 
-    Optional<Moneta> create(Moneta moneta);
+    Optional<Film> create(Film film);
 
-    Optional<Moneta> edit(Moneta moneta);
+    Optional<Film> edit(Film film);
 
     Optional<Boolean> deleteById(Long id);
 
-    List<Moneta> findLatest3();
+    List<Film> findLatest3();
 }

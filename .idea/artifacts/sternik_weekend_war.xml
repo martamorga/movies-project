@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="sternik-weekend:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="sternik-weekend.war">
+      <element id="artifact" artifact-name="sternik-weekend:war exploded" />
+    </root>
+  </artifact>
+</component>

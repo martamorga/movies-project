@@ -14,37 +14,37 @@
     <h2 th:text="#{title.list}" style="display: inline;">Lista monet</h2>
   </div>
   
-  <div class="listaMonet" th:unless="${#lists.isEmpty(coinsAll)}">
+  <div class="listaMonet" th:unless="${#lists.isEmpty(filmyWszystkie)}">
     <table>
       <thead>
         <tr>
-          <th th:text="#{klaser.numerKatalogowy}">numerKatalogowy</th>
-          <th th:text="#{klaser.nominal}">nominal</th>
-          <th th:text="#{klaser.opis}">opis</th>
-          <th th:text="#{klaser.waluta}">waluta</th>
-          <th th:text="#{klaser.cenaNabycia}">cenaNabycia</th>
-          <th th:text="#{klaser.dataNabycia}">dataNabycia</th>
-          <th th:text="#{klaser.krajPochodzenia}">krajPochodzenia</th>
+          <th th:text="#{klaser.id}">id</th>
+          <th th:text="#{klaser.gatunek}">gatunek</th>
+          <th th:text="#{klaser.tytul}">tytul</th>
+          <th th:text="#{klaser.autor}">autor</th>
+          <th th:text="#{klaser.cenaWypozyczenia}">cenaWypozyczenia</th>
+          <th th:text="#{klaser.dataPolskiejPremiery}">dataPolskiejPremiery</th>
+          <th th:text="#{klaser.krajProdukcji}">krajProdukcji</th>
           <th th:text="#{klaser.status}">status</th>
           <th th:text="#{klaser.operacje}">operacje</th>
         </tr>
       </thead>
       <tbody>
-        <tr th:each="coin : ${coinsAll}">
-          <form action="#" th:action="@{/monety}" th:object="${coin}" method="post">
-          <td th:text="${coin.numerKatalogowy}">1</td>
-          <td th:text="${coin.nominal}">100</td>
-          <td th:text="${coin.opis}">Długi opis</td>
-          <td th:text="${coin.waluta}">zł</td>
-          <td th:text="${{coin.cenaNabycia}}">5.12</td>
-          <td th:text="${{coin.dataNabycia}}">2011/13/01</td>
-          <td th:text="${coin.krajPochodzenia}">Polska</td>
-          <td th:text="#{${'klaser.status.' + coin.status}}">Nowa</td>
+        <tr th:each="film : ${filmyWszystkie}">
+          <form action="#" th:action="@{/filmy}" th:object="${film}" method="post">
+          <td th:text="${film.id}">1</td>
+          <td th:text="${film.gatunek}">100</td>
+          <td th:text="${film.tytul}">Długi tytul</td>
+          <td th:text="${film.autor}">zł</td>
+          <td th:text="${{film.cenaWypozyczenia}}">5.12</td>
+          <td th:text="${{film.dataPolskiejPremiery}}">2011/13/01</td>
+          <td th:text="${film.krajProdukcji}">Polska</td>
+          <td th:text="#{${'klaser.status.' + film.status}}">Nowa</td>
           <td>
-            <button type="submit" name="remove" th:value="${coin.numerKatalogowy}" 
+            <button type="submit" name="remove" th:value="${film.id}"
             th:text="#{klaser.remove}">Dell</button>
             
-            <a href="moneta.html" th:href="@{|/monety/${coin.numerKatalogowy}|}" >
+            <a href="film.html" th:href="@{|/filmy/${film.id}|}" >
             <button type="button" th:text="#{klaser.edit}">Editt</button></a>              
           </td>
           </form>

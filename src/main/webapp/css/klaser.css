@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-family: 'DejaVu Sans', Arial, Helvetica;
+  font-family: Arial;
   font-size: 12px;
   background-color: #ffffff;
   border: 1px solid #cccccc;
@@ -37,7 +37,7 @@ border-radius: 5px;
 }
 
 ul#messages li.info {
-background: #7f7;
+background: #b626b7;
 }
 
 ul#messages li.error {
@@ -101,14 +101,14 @@ form div > table td, form div > table th {
 
 form div > table th {
   font-weight: normal;
-  background-color: #ddff77;
+  background-color: #000000;
   color: #000000;
 }
 
 
 form div.submit {
   margin-top: 40px;
-  background-color: #99cc33;
+  background-color: #966d96;
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -142,7 +142,7 @@ div.listaMonet > table > tbody > tr, div.listaMonet > table > thead > tr {
 }
 
 div.listaMonet > table th {
-  background-color: #99cc33;
+  background-color: #761a77;
 }
 
 div.listaMonet > table > tbody > tr > td > table {
@@ -151,7 +151,7 @@ div.listaMonet > table > tbody > tr > td > table {
 }
 
 div.listaMonet > table > tbody > tr > td > table > tbody > tr> td {
-  background-color: #ddff77;
+  background-color: #000000;
   padding: 0px 5px;
 }
 

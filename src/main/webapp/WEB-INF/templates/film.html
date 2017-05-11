@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout ::site-head">
+<title>Klaser monet</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" media="all" href="../../css/klaser.css" th:href="@{/css/klaser.css}" />
+</head>
+
+<body>
+  <header th:replace="layout :: site-header" />
+             
+  <div>
+ 
+    <form action="#" th:action="@{/filmy}" th:object="${film}" method="post">
+
+      <fieldset>
+
+        <legend th:text="#{klaser.film.dane}">Starter Data</legend>
+
+        <ul th:if="${#fields.hasErrors('*')}" class="errorlist">
+          <li th:each="err : ${#fields.errors('*')}" th:text="${err}">Input is incorrect</li>
+        </ul>
+        
+        <div>
+          <label for="id"> <span th:text="#{klaser.id}">numer</span>
+          </label> <input type="text" th:field="*{id}" th:errorclass="fieldError" />
+        </div>
+        <div>
+          <label for="tytul"> <span th:text="#{klaser.tytul}">tytul</span>
+          </label> <input type="text" th:field="*{tytul}" th:errorclass="fieldError" />
+        </div>
+        <div>
+          <label for="autor"> <span th:text="#{klaser.autor}">autor</span>
+          </label> <input type="text" th:field="*{autor}" th:errorclass="fieldError" />
+        </div>
+        <div>
+          <label for="gatunek"> <span th:text="#{klaser.gatunek}">gatunek</span>
+          </label> <input type="text" th:field="*{gatunek}" th:errorclass="fieldError" />
+          <span th:if="${#fields.hasErrors('gatunek')}" th:errors="*{gatunek}">Incorrect gatunek</span>
+        </div>
+        <div>
+          <label for="dataPolskiejPremiery"> <span th:text="#{klaser.dataPolskiejPremiery}">Date kup</span> (<span
+                  th:text="#{date.format}">YYYY/MM/DD</span>)
+          </label> <input type="text" th:field="*{dataPolskiejPremiery}" th:errorclass="fieldError" />
+        </div>
+        <div>
+          <label for="krajProdukcji"> <span th:text="#{klaser.krajProdukcji}">krajProdukcji</span>
+          </label> <input type="text" th:field="*{krajProdukcji}" th:errorclass="fieldError" />
+        </div>
+        <div>
+          <label for="cenaWypozyczenia"> <span th:text="#{klaser.cenaWypozyczenia}">cenaWypozyczenia</span>
+          </label> <input type="text" th:field="*{cenaWypozyczenia}" th:errorclass="fieldError" />
+        </div>
+        <div>
+          <label for="status"> <span th:text="#{klaser.status}">status</span></label>
+            <select th:field="*{status}" th:errorclass="fieldError">
+              <option th:each="st : ${statusyAll}" th:value="${st}" th:text="#{${'klaser.status.' + st}}">Nowa</option>
+            </select>          
+        </div>
+        <div class="submit">          
+            <button th:if="*{id}" type="submit" name="save" th:value="*{id}" >Zapisz</button>
+         
+         
+            <button th:unless="*{id}" type="submit" name="create" >Zapisz.</button>
+            
+            
+            <a href="klaser.html" th:href="@{/filmy}" ><button type="button">Cancel</button></a>
+        </div>
+
+      </fieldset>
+
+    </form>
+
+  </div>
+  <footer th:replace="layout :: site-footer" />
+</body>
+</html>

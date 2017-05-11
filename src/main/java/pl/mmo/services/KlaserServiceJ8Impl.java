@@ -11,11 +11,11 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-import pl.mmo.entities.Moneta;
+import pl.mmo.entities.Film;
 import pl.mmo.entities.Status;
-import pl.mmo.repositories.MonetaAlreadyExistsException;
-import pl.mmo.repositories.MonetyRepository;
-import pl.mmo.repositories.NoSuchMonetaException;
+import pl.mmo.repositories.MoviesAlreadyExistsException;
+import pl.mmo.repositories.FilmyRepository;
+import pl.mmo.repositories.NoSuchMovieException;
 
 
 @Service
@@ -24,36 +24,36 @@ public class KlaserServiceJ8Impl implements KlaserService {
 
     @Autowired
     @Qualifier("lista")
-    private MonetyRepository monety;
+    private FilmyRepository filmy;
 
     @Override
-    public List<Moneta> findAll() {
-        return monety.findAll();
+    public List<Film> findAll() {
+        return filmy.findAll();
     }
 
     @Override
-    public List<Moneta> findLatest3() {
-        return monety.findAll().stream().sorted((a, b) -> b.getDataNabycia().compareTo(a.getDataNabycia())).limit(5)
+    public List<Film> findLatest3() {
+        return filmy.findAll().stream().sorted((a, b) -> b.getDataPolskiejPremiery().compareTo(a.getDataPolskiejPremiery())).limit(5)
                 .collect(Collectors.toList());
     }
 
     @Override
-    public Optional<Moneta> findById(Long id) {
+    public Optional<Film> findById(Long id) {
         try {
-            return Optional.of(monety.readById(id));
-        } catch (NoSuchMonetaException e) {
+            return Optional.of(filmy.readById(id));
+        } catch (NoSuchMovieException e) {
             return Optional.empty();
         }
     }
 
     @Override
-    public Optional<Moneta> create(Moneta moneta) {
+    public Optional<Film> create(Film film) {
         try {
-            return Optional.of(monety.create(moneta));
-        } catch (MonetaAlreadyExistsException e) {
+            return Optional.of(filmy.create(film));
+        } catch (MoviesAlreadyExistsException e) {
             try {
-                return Optional.of(monety.readById(moneta.getNumerKatalogowy()));
-            } catch (NoSuchMonetaException e1) {
+                return Optional.of(filmy.readById(film.getId()));
+            } catch (NoSuchMovieException e1) {
                 return Optional.empty();
             }
         }
@@ -61,10 +61,10 @@ public class KlaserServiceJ8Impl implements KlaserService {
     }
 
     @Override
-    public Optional<Moneta> edit(Moneta moneta) {
+    public Optional<Film> edit(Film film) {
         try {
-            return Optional.of(monety.update(moneta));
-        } catch (NoSuchMonetaException e) {
+            return Optional.of(filmy.update(film));
+        } catch (NoSuchMovieException e) {
             return Optional.empty();
         }
     }
@@ -72,16 +72,16 @@ public class KlaserServiceJ8Impl implements KlaserService {
     @Override
     public Optional<Boolean> deleteById(Long id) {
         try {
-            monety.deleteById(id);
+            filmy.deleteById(id);
             return Optional.of(Boolean.TRUE);
-        } catch (NoSuchMonetaException e) {
+        } catch (NoSuchMovieException e) {
             return Optional.of(Boolean.FALSE);
         }
     }
 
     @Override
-    public List<Moneta> findAllToSell() {
-        return monety.findAll().stream().filter(p -> Objects.equals(p.getStatus(), Status.DO_SPRZEDANIA))
+    public List<Film> findAllToSell() {
+        return filmy.findAll().stream().filter(p -> Objects.equals(p.getStatus(), Status.DO_WYPOZYCZENIA))
                 .collect(Collectors.toList());
     }
 }
