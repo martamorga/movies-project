@@ -63,14 +63,14 @@ public class FilmyController {
             Film film = result.get();
             return new ResponseEntity<Film>(film, HttpStatus.OK);
         } else {
-            notifyService.addErrorMessage("Cannot find moneta #" + id);
+            notifyService.addErrorMessage("Cannot find movies #" + id);
             model.clear();
             return new ResponseEntity<Film>(HttpStatus.NOT_FOUND);
         }
     }
 
     @RequestMapping(value = "/filmy", params = { "save" }, method = RequestMethod.POST)
-    public String saveMoneta(Film film, BindingResult bindingResult, ModelMap model) {
+    public String saveMovie(Film film, BindingResult bindingResult, ModelMap model) {
 
         if (bindingResult.hasErrors()) {
             notifyService.addErrorMessage("Please fill the form correctly!");
@@ -86,7 +86,7 @@ public class FilmyController {
     }
 
     @RequestMapping(value = "/filmy", params = { "create" }, method = RequestMethod.POST)
-    public String createMoneta(Film film, BindingResult bindingResult, ModelMap model) {
+    public String createMovie(Film film, BindingResult bindingResult, ModelMap model) {
         if (bindingResult.hasErrors()) {
             notifyService.addErrorMessage("Please fill the form correctly!");
             return "film";
@@ -106,7 +106,6 @@ public class FilmyController {
 
     @RequestMapping(value = "/filmy/create", method = RequestMethod.GET)
     public String showMainPages(final Film film) {
-        // Ustawiamy date nowej monety, na dole strony do dodania
         film.setDataPolskiejPremiery(Calendar.getInstance().getTime());
         return "film";
     }
