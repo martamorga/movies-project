@@ -33,7 +33,7 @@ public class KlaserServiceJ8Impl implements KlaserService {
 
     @Override
     public List<Film> findLatest3() {
-        return filmy.findAll().stream().sorted((a, b) -> b.getDataDodaniaDoRepozytorium().compareTo(a.getDataDodaniaDoRepozytorium())).limit(5)
+        return filmy.findAll().stream().sorted((a, b) -> b.getDataPolskiejPremiery().compareTo(a.getDataPolskiejPremiery())).limit(5)
                 .collect(Collectors.toList());
     }
 

@@ -41,9 +41,9 @@
           <span th:if="${#fields.hasErrors('gatunek')}" th:errors="*{gatunek}">Incorrect gatunek</span>
         </div>
         <div>
-          <label for="dataDodaniaDoRepozytorium"> <span th:text="#{klaser.dataDodaniaDoRepozytorium}">Date kup</span> (<span
+          <label for="dataPolskiejPremiery"> <span th:text="#{klaser.dataPolskiejPremiery}">Date kup</span> (<span
                   th:text="#{date.format}">YYYY/MM/DD</span>)
-          </label> <input type="text" th:field="*{dataDodaniaDoRepozytorium}" th:errorclass="fieldError" />
+          </label> <input type="text" th:field="*{dataPolskiejPremiery}" th:errorclass="fieldError" />
         </div>
         <div>
           <label for="krajProdukcji"> <span th:text="#{klaser.krajProdukcji}">krajProdukcji</span>
@@ -61,6 +61,8 @@
         </div>
         <div class="submit">          
             <button th:if="*{id}" type="submit" name="save" th:value="*{id}" >Zapisz</button>
+          <a href="film.html" th:href="@{|/filmy/${film.id}|}" >
+            <button type="button" th:text="#{klaser.edit}">Editt</button></a>
 
 
           <button th:unless="*{id}" type="submit" name="create" >Zapisz.</button>

@@ -37,7 +37,7 @@ border-radius: 5px;
 }
 
 ul#messages li.info {
-background: #966d96;
+background: #b626b7;
 }
 
 ul#messages li.error {
@@ -142,7 +142,7 @@ div.listaMonet > table > tbody > tr, div.listaMonet > table > thead > tr {
 }
 
 div.listaMonet > table th {
-  background-color: #966d96;
+  background-color: #761a77;
 }
 
 div.listaMonet > table > tbody > tr > td > table {
