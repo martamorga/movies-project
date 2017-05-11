@@ -22,7 +22,7 @@ public class FilmyRepositoryJ8Impl implements FilmyRepository {
 
             //Long id, String tytul, String autor, String krajPochodzenia, String gatunek,
             //Date dataPolskiejPremiery, BigDecimal cenaWypozyczenia, Status status
-            add(Film.dodajFilm(1L, "Skazani na Shawshank", "Frank Darabont", "USA", "Dramat", new Date(), new BigDecimal("5.5"),
+            add(Film.dodajFilm(1L, "Skazani na Shawshank", "Frank Darabont", "USA", "Dramat", new Date(2017-05-05), new BigDecimal("5.5"),
                     Status.WYPOZYCZONY));
             add(Film.dodajFilm(2L, "Nietykalni", "Olivier Nakache, Eric Toledano", "Francja", "Biograficzny, Dramat, Komedia", new Date(), new BigDecimal("1.2"),
                     Status.DO_WYPOZYCZENIA));

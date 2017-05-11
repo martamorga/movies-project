@@ -1,6 +1,6 @@
 {
-  "name": "sernik-weekend",
-  "description": "new app on heroku.",
+  "name": "movies-project-sternik",
+  "description": "Aplikacja przygotowana przy projekcie Sternik",
   "image": "heroku/java",
   "addons": [ "heroku-postgresql" ]
 }
