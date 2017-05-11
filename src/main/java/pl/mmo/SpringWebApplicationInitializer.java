@@ -35,12 +35,5 @@ public class SpringWebApplicationInitializer extends AbstractAnnotationConfigDis
         return new String[] { "/" };
     }
 
-/*    @Override
-    protected Filter[] getServletFilters() {
-        final CharacterEncodingFilter encodingFilter = new CharacterEncodingFilter();
-        encodingFilter.setEncoding(CHARACTER_ENCODING);
-        encodingFilter.setForceEncoding(false);
-        return new Filter[] { encodingFilter };
-    }*/
 
 }

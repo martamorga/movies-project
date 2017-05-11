@@ -106,7 +106,6 @@ public class FilmyController {
 
     @RequestMapping(value = "/filmy/create", method = RequestMethod.GET)
     public String showMainPages(final Film film) {
-        // Ustawiamy date nowej monety, na dole strony do dodania
         film.setDataPolskiejPremiery(Calendar.getInstance().getTime());
         return "film";
     }

@@ -6,7 +6,6 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
@@ -22,7 +21,6 @@ import pl.mmo.repositories.NoSuchMovieException;
 @Primary
 public class KlaserServiceJ8Impl implements KlaserService {
 
-    @Autowired
     @Qualifier("lista")
     private FilmyRepository filmy;
 
