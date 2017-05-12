@@ -63,10 +63,10 @@
             <button th:if="*{id}" type="submit" name="save" th:value="*{id}" >Zapisz</button>
 
 
-            <button th:unless="*{id}" type="submit" name="create" >Zapisz.</button>
+            <button th:unless="*{id}" type="submit" name="create" >Zapisz</button>
             
             
-            <a href="klaser.html" th:href="@{/filmy}" ><button type="button">Cancel</button></a>
+            <a href="klaser.html" th:href="@{/filmy}" ><button type="button">Usuń</button></a>
         </div>
 
       </fieldset>
