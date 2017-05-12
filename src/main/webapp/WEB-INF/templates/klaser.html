@@ -33,12 +33,12 @@
         <tr th:each="film : ${filmyWszystkie}">
           <form action="#" th:action="@{/filmy}" th:object="${film}" method="post">
           <td th:text="${film.id}">1</td>
-          <td th:text="${film.gatunek}">100</td>
           <td th:text="${film.tytul}">Długi tytul</td>
           <td th:text="${film.autor}">zł</td>
+          <td th:text="${film.gatunek}">100</td>
+          <td th:text="${film.krajProdukcji}">Polska</td>
           <td th:text="${{film.cenaWypozyczenia}}">5.12</td>
           <td th:text="${{film.dataDodaniaFilmu}}">2011/13/01</td>
-          <td th:text="${film.krajProdukcji}">Polska</td>
           <td th:text="#{${'klaser.status.' + film.status}}">Nowa</td>
           <td>
             <button type="submit" name="remove" th:value="${film.id}"
