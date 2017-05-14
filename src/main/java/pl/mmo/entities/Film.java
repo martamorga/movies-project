@@ -12,7 +12,6 @@ import java.util.Date;
 @Entity
 public class Film {
 
-    @NotNull
     @Id
     private Long id;
 
