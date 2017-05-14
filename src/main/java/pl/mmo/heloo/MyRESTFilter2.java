@@ -15,9 +15,9 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.http.HttpRequest;
 
-//@WebFilter(filterName = "/MyRESTFilter2", 
-//servletNames = { "HelloServlet" }, 
-//urlPatterns = { "/hello" })
+@WebFilter(filterName = "/MyRESTFilter2",
+//servletNames = { "HelloServlet" },
+        urlPatterns = { "/hello" })
 public class MyRESTFilter2 implements javax.servlet.Filter {
 
     @Override
