@@ -19,7 +19,7 @@ public class Film {
     @NotEmpty
     private String gatunek;
 
-    @Size(min = 2, max = 30, message = "Opis should be in the range [{min}...{max}]")
+    @NotEmpty
     private String tytul;
 
     @NotEmpty

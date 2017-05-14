@@ -2,25 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8655aa9d-fa19-4ed2-9814-a2eed7e7a6c1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/mmo/repositories/springdata/FilmRepostory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/mmo/services/KlaserServiceJPAImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/mmo/web/conversion/DateFormatter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/pl/mmo/web/FilmyController.java" afterPath="$PROJECT_DIR$/src/main/java/pl/mmo/web/controlers/FilmyController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/pl/mmo/web/KlaserController.java" afterPath="$PROJECT_DIR$/src/main/java/pl/mmo/web/controlers/KlaserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/sternik_weekend_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/sternik_weekend_war.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/sternik_weekend_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/sternik_weekend_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/mmo/SpringBusinessConfig.java" afterPath="$PROJECT_DIR$/src/main/java/pl/mmo/SpringBusinessConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/mmo/SpringWebApplicationInitializer.java" afterPath="$PROJECT_DIR$/src/main/java/pl/mmo/SpringWebApplicationInitializer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/mmo/entities/Film.java" afterPath="$PROJECT_DIR$/src/main/java/pl/mmo/entities/Film.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/mmo/services/NotificationService.java" afterPath="$PROJECT_DIR$/src/main/java/pl/mmo/services/NotificationService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/mmo/web/SpringWebConfig.java" afterPath="$PROJECT_DIR$/src/main/java/pl/mmo/web/SpringWebConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/film.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/film.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sternik-weekend.iml" afterPath="$PROJECT_DIR$/sternik-weekend.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,12 +23,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Film.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Film.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/mmo/entities/Film.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-531">
-              <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+            <state relative-caret-position="340">
+              <caret line="27" column="12" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+              <folding>
+                <marker date="1494757910923" expanded="true" signature="84237:84254" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,7 +58,7 @@
       <file leaf-file-name="SpringWebConfig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/mmo/web/SpringWebConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="-1463">
               <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -81,7 +77,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="film.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="film.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/film.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="308">
@@ -127,16 +123,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
               <caret line="18" column="7" lean-forward="false" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FilmyRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/mmo/repositories/FilmyRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -226,12 +212,12 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/mmo/web/FilmyController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/mmo/web/controlers/FilmyController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/mmo/SpringBusinessConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/mmo/entities/Film.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/mmo/web/conversion/DateFormatter.java" />
         <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/pl/mmo/web/SpringWebConfig.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/film.html" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/mmo/entities/Film.java" />
       </list>
     </option>
   </component>
@@ -1013,12 +999,20 @@
       <workItem from="1494535026482" duration="2293000" />
       <workItem from="1494673799119" duration="875000" />
       <workItem from="1494699605312" duration="22000" />
-      <workItem from="1494750787578" duration="6446000" />
+      <workItem from="1494750787578" duration="6678000" />
     </task>
+    <task id="LOCAL-00001" summary="proba odpalenia na heroku">
+      <created>1494757902450</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1494757902450</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18790000" />
+    <option name="totallyTimeSpent" value="19022000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1072,6 +1066,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="proba odpalenia na heroku" />
+    <option name="LAST_COMMIT_MESSAGE" value="proba odpalenia na heroku" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1290,17 +1288,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-          <folding>
-            <marker date="1494757752104" expanded="true" signature="94222:94239" ph="..." />
-            <marker date="1494757752104" expanded="true" signature="94222:94270" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/mmo/entities/Status.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1455,24 +1442,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/mmo/web/SpringWebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/mmo/entities/Film.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-531">
-          <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/klaser.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -1518,6 +1487,34 @@
             <marker date="1494757738531" expanded="true" signature="2211:2234" ph="Cena wypożyczenia" />
             <marker date="1494757738531" expanded="true" signature="2437:2450" ph="Status" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+          <folding>
+            <marker date="1494757910923" expanded="true" signature="84237:84254" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/mmo/web/SpringWebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1463">
+          <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/mmo/entities/Film.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="27" column="12" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
