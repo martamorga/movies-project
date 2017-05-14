@@ -6,6 +6,6 @@ import pl.mmo.entities.Film;
 
 
 @Repository
-public interface FilmRepostory extends JpaRepository<Film, Integer>{
+public interface FilmRepostory extends JpaRepository<Film, Long>{
     public Film findById(Long id);
 }

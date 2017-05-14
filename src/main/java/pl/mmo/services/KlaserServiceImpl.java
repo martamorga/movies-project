@@ -41,18 +41,18 @@ public class KlaserServiceImpl implements KlaserService {
     }
 
     @Override
-    public Optional<Film> create(Film film) {
+    public Optional<Film> create(Film moneta) {
         try {
-            return Optional.of(bazaDanych.create(film));
+            return Optional.of(bazaDanych.create(moneta));
         } catch (MoviesAlreadyExistsException e) {
             return Optional.empty();
         }
     }
 
     @Override
-    public Optional<Film> edit(Film film) {
+    public Optional<Film> edit(Film moneta) {
         try {
-            return Optional.of(bazaDanych.update(film));
+            return Optional.of(bazaDanych.update(moneta));
         } catch (NoSuchMovieException e) {
             return Optional.empty();
         }
