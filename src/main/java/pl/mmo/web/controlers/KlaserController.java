@@ -1,5 +1,6 @@
 package pl.mmo.web.controlers;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import pl.mmo.entities.Film;
 import pl.mmo.services.KlaserService;
 import pl.mmo.services.NotificationService;
@@ -18,15 +19,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class KlaserController {
 
     @Autowired
+    @Qualifier("spring-data")
     private KlaserService klaserService;
-
-    @Autowired
-    private NotificationService notificationService;
 
     @ModelAttribute("filmyWszystkie")
     public List<Film> populateCoins() {
         return this.klaserService.findAll();
     }
+
+
+
+
+//    @Autowired
+//    private NotificationService notificationService;
 
 
     @RequestMapping({"/", "/index"})

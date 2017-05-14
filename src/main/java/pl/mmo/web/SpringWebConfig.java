@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Description;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.format.FormatterRegistry;
+import org.springframework.format.datetime.DateFormatter;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -69,9 +70,10 @@ public class SpringWebConfig
     }
 
     @Bean
-    public org.springframework.format.datetime.DateFormatter dateFormatter() {
-        return new org.springframework.format.datetime.DateFormatter();
+    public DateFormatter dateFormatter() {
+        return new DateFormatter();
     }
+
 
 
 

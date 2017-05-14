@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Optional;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -71,7 +72,7 @@ public class FilmyController {
     }
 
     @RequestMapping(value = "/filmy", params = { "save" }, method = RequestMethod.POST)
-    public String saveMovie(Film film, BindingResult bindingResult, ModelMap model) {
+    public String saveMovie(@Valid Film film, BindingResult bindingResult, ModelMap model) {
 
         if (bindingResult.hasErrors()) {
             notifyService.addErrorMessage("Please fill the form correctly!");
