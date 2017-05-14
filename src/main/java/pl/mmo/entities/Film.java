@@ -1,17 +1,39 @@
 package pl.mmo.entities;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.math.BigDecimal;
 import java.util.Date;
 
+@Entity
 public class Film {
 
+    @NotNull
+    @Id
     private Long id;
+
+    @NotEmpty
     private String gatunek;
+
+    @Size(min = 2, max = 30, message = "Opis should be in the range [{min}...{max}]")
     private String tytul;
+
+    @NotEmpty
     private String autor;
+
+    @NotNull
     private BigDecimal cenaWypozyczenia;
+
     private Date dataDodaniaFilmu;
+
+    @NotEmpty
     private String krajProdukcji;
+
+    @NotNull
     private Status status;
 
 

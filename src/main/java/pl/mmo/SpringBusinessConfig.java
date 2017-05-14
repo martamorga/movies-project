@@ -13,6 +13,7 @@ import org.springframework.context.annotation.ImportResource;
 @Configuration
 @ComponentScan(basePackages = { "pl.mmo" }, excludeFilters = {
         @Filter(type = FilterType.REGEX, pattern = "pl\\.mmo\\.web\\..*") })
+@ImportResource({"classpath:/applicationContext.xml"})//,"classpath:/database-config.xml"})
 public class SpringBusinessConfig {
 
 

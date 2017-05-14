@@ -1,8 +1,5 @@
 package pl.mmo;
 
-import javax.servlet.Filter;
-
-import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import pl.mmo.web.SpringWebConfig;

@@ -8,7 +8,6 @@ public interface NotificationService {
     void addInfoMessage(String msg);
     void addErrorMessage(String msg);
     static List<NotificationMessage> getNotificationMessages() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 }

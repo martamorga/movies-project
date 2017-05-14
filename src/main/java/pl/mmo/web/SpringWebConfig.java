@@ -8,6 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Description;
 import org.springframework.context.support.ResourceBundleMessageSource;
+import org.springframework.format.FormatterRegistry;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -61,16 +62,16 @@ public class SpringWebConfig
         return messageSource;
     }
 
-//    @Override
-//    public void addFormatters(final FormatterRegistry registry) {
-//        super.addFormatters(registry);
-//        registry.addFormatter(dateFormatter());
-//    }
+    @Override
+    public void addFormatters(final FormatterRegistry registry) {
+        super.addFormatters(registry);
+        registry.addFormatter(dateFormatter());
+    }
 
-//    @Bean
-//    public DateFormatter dateFormatter() {
-//        return new DateFormatter();
-//    }
+    @Bean
+    public org.springframework.format.datetime.DateFormatter dateFormatter() {
+        return new org.springframework.format.datetime.DateFormatter();
+    }
 
 
 
@@ -96,9 +97,20 @@ public class SpringWebConfig
         return templateResolver;
     }
 
-    
+    // Z tymianka wersji 2
+// 	@Bean
+// 	@Description("Thymeleaf Template Resolver")
+// 	public ServletContextTemplateResolver templateResolver() {
+// 	    ServletContextTemplateResolver templateResolver = new ServletContextTemplateResolver();
+// 	    templateResolver.setPrefix("/WEB-INF/views/");
+// 	    templateResolver.setSuffix(".html");
+// 	    templateResolver.setTemplateMode("HTML5");
+// 	    return templateResolver;
+// 	}
+
+
     @Bean
-	@Description("Thymeleaf Template Engine")    
+    @Description("Thymeleaf Template Engine")
     public SpringTemplateEngine templateEngine(){
         // SpringTemplateEngine automatically applies SpringStandardDialect and
         // enables Spring's own MessageSource message resolution mechanisms.
@@ -114,11 +126,11 @@ public class SpringWebConfig
     }
 
     @Bean
-	@Description("Thymeleaf View Resolver")    
+    @Description("Thymeleaf View Resolver")
     public ThymeleafViewResolver viewResolver(){
         ThymeleafViewResolver viewResolver = new ThymeleafViewResolver();
         viewResolver.setTemplateEngine(templateEngine());
-	    viewResolver.setCharacterEncoding("UTF-8");
+        viewResolver.setCharacterEncoding("UTF-8");
         return viewResolver;
     }
 }

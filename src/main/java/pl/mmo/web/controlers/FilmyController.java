@@ -1,4 +1,4 @@
-package pl.mmo.web;
+package pl.mmo.web.controlers;
 
 import java.util.Arrays;
 import java.util.Calendar;
@@ -8,6 +8,7 @@ import java.util.Optional;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -28,7 +29,7 @@ import pl.mmo.services.NotificationService;
 public class FilmyController {
 
     @Autowired
-    // @Qualifier("spring")
+    @Qualifier("spring-data")
     private KlaserService klaserService;
 
     @Autowired

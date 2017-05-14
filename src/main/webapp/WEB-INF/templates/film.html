@@ -43,7 +43,7 @@
         <div>
           <label for="dataDodaniaFilmu"> <span th:text="#{klaser.dataDodaniaFilmu}">Date kup</span> (<span
                   th:text="#{date.format}">YYYY/MM/DD</span>)
-          </label> <input type="text" th:field="*{dataDodaniaFilmu}" th:errorclass="fieldError" />
+          </label> <input type="text" th:field="*{{dataDodaniaFilmu}}" th:errorclass="fieldError" />
         </div>
         <div>
           <label for="krajProdukcji"> <span th:text="#{klaser.krajProdukcji}">krajProdukcji</span>
@@ -63,10 +63,10 @@
             <button th:if="*{id}" type="submit" name="save" th:value="*{id}" >Zapisz</button>
 
 
-            <button th:unless="*{id}" type="submit" name="create" >Zapisz</button>
+            <button th:unless="*{id}" type="submit" name="create" >Zapisz.</button>
             
             
-            <a href="klaser.html" th:href="@{/filmy}" ><button type="button">Usuń</button></a>
+            <a href="klaser.html" th:href="@{/filmy}" ><button type="button">Cancel</button></a>
         </div>
 
       </fieldset>
