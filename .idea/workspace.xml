@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8655aa9d-fa19-4ed2-9814-a2eed7e7a6c1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/mmo/repositories/springdata/FilmRepostory.java" afterPath="$PROJECT_DIR$/src/main/java/pl/mmo/repositories/springdata/FilmRepostory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/mmo/services/KlaserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/pl/mmo/services/KlaserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/mmo/services/KlaserServiceJPAImpl.java" afterPath="$PROJECT_DIR$/src/main/java/pl/mmo/services/KlaserServiceJPAImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/mmo/web/SpringWebConfig.java" afterPath="$PROJECT_DIR$/src/main/java/pl/mmo/web/SpringWebConfig.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -78,8 +76,18 @@
       <file leaf-file-name="FilmyRepositoryJ8Impl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/mmo/repositories/FilmyRepositoryJ8Impl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="31" column="25" lean-forward="false" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+            <state relative-caret-position="306">
+              <caret line="28" column="73" lean-forward="false" selection-start-line="28" selection-start-column="70" selection-end-line="28" selection-end-column="73" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -95,7 +103,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KlaserServiceJPAImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="KlaserServiceJPAImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/mmo/services/KlaserServiceJPAImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="884">
@@ -188,6 +196,7 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/mmo/services/KlaserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/mmo/repositories/springdata/FilmRepostory.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/mmo/services/KlaserServiceJPAImpl.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -1060,7 +1069,7 @@
       <workItem from="1494535026482" duration="2293000" />
       <workItem from="1494673799119" duration="875000" />
       <workItem from="1494699605312" duration="22000" />
-      <workItem from="1494750787578" duration="15937000" />
+      <workItem from="1494750787578" duration="16518000" />
     </task>
     <task id="LOCAL-00001" summary="proba odpalenia na heroku">
       <created>1494757902450</created>
@@ -1139,11 +1148,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494764458721</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="zmiany - baza danych">
+      <created>1494769540198</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1494769540198</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28281000" />
+    <option name="totallyTimeSpent" value="28862000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1249,14 +1265,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1372,7 +1380,7 @@
         <state relative-caret-position="323">
           <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
           <folding>
-            <marker date="1494769497908" expanded="true" signature="92368:92385" ph="..." />
+            <marker date="1494770065831" expanded="true" signature="92571:92588" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1643,26 +1651,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/mmo/entities/Film.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="15" lean-forward="false" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/mmo/repositories/springdata/FilmRepostory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/mmo/repositories/FilmyRepositoryJ8Impl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="31" column="25" lean-forward="false" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1682,6 +1674,30 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/mmo/entities/Film.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="15" column="15" lean-forward="false" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/mmo/repositories/FilmyRepositoryJ8Impl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="28" column="73" lean-forward="false" selection-start-line="28" selection-start-column="70" selection-end-line="28" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
