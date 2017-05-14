@@ -43,13 +43,13 @@ public class KlaserServiceJPAImpl implements KlaserService {
     }
 
     @Override
-    public Optional<Film> create(Film moneta) {
-        return Optional.of(bazaDanych.save(moneta));
+    public Optional<Film> create(Film film) {
+        return Optional.of(bazaDanych.save(film));
     }
 
     @Override
-    public Optional<Film> edit(Film moneta) {
-        return Optional.of(bazaDanych.save(moneta));
+    public Optional<Film> edit(Film film) {
+        return Optional.of(bazaDanych.save(film));
     }
 
     @Override

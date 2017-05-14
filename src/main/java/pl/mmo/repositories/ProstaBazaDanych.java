@@ -46,17 +46,17 @@ public class ProstaBazaDanych implements FilmyRepository {
     }
 
     @Override
-    public Film create(Film moneta) throws MoviesAlreadyExistsException {
-        if (moneta.getId() != null && baza[moneta.getId().intValue()] != null) {
-            if (moneta.getId().equals(baza[moneta.getId().intValue()].getId())) {
-                throw new MoviesAlreadyExistsException("Już jest moneta o takim numerze.");
+    public Film create(Film film) throws MoviesAlreadyExistsException {
+        if (film.getId() != null && baza[film.getId().intValue()] != null) {
+            if (film.getId().equals(baza[film.getId().intValue()].getId())) {
+                throw new MoviesAlreadyExistsException("Już jest film o takim numerze.");
             }
         }
         for (int i = 0; i < baza.length; i++) {
             if (baza[i] == null) {
-                baza[i] = moneta;
-                moneta.setId((long) i);
-                return moneta;
+                baza[i] = film;
+                film.setId((long) i);
+                return film;
             }
         }
         throw new RuntimeException("Brak miejsca w tablicy");
@@ -65,7 +65,7 @@ public class ProstaBazaDanych implements FilmyRepository {
     @Override
     public void deleteById(Long id) throws NoSuchMovieException {
         int numerKatalogowy = id.intValue();
-        if (!sprawdzPoprawnoscNumeruKatalogowego(numerKatalogowy)) {
+        if (!sprawdzPoprawnoscNumeruId(numerKatalogowy)) {
             throw new NoSuchMovieException("Nie poprawny numer katologowy");
         }
         // tu troche zle ;)
@@ -75,7 +75,7 @@ public class ProstaBazaDanych implements FilmyRepository {
     @Override
     public Film update(Film moneta) throws NoSuchMovieException {
         int numerKatalogowy = moneta.getId().intValue();
-        if (!sprawdzPoprawnoscNumeruKatalogowego(numerKatalogowy)) {
+        if (!sprawdzPoprawnoscNumeruId(numerKatalogowy)) {
             throw new NoSuchMovieException("Nie poprawny numer katologowy");
         }
 
@@ -91,7 +91,7 @@ public class ProstaBazaDanych implements FilmyRepository {
     @Override
     public Film readById(Long numerKatalogowy) throws NoSuchMovieException {
         int id = numerKatalogowy.intValue();
-        if (!sprawdzPoprawnoscNumeruKatalogowego(id) || czyWolne(id)) {
+        if (!sprawdzPoprawnoscNumeruId(id) || czyWolne(id)) {
             throw new NoSuchMovieException();
         }
         return baza[id];
@@ -119,8 +119,8 @@ public class ProstaBazaDanych implements FilmyRepository {
         }
     }
 
-    private boolean sprawdzPoprawnoscNumeruKatalogowego(int numerKatalogowy) {
-        if (numerKatalogowy < 0 || numerKatalogowy >= baza.length) {
+    private boolean sprawdzPoprawnoscNumeruId(int id) {
+        if (id < 0 || id >= baza.length) {
             System.out.println("Zły numer katalogowy");
             return false;
         }
